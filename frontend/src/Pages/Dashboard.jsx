@@ -3,7 +3,7 @@ import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, User, Code, Briefcase, FileText, MessageSquare, Star, Settings, LogOut } from 'lucide-react';
 import SectionManager from '../components/SectionManager';
 import AboutManager from '../components/AboutManager';
-
+import MessagesManager from '../components/MessagesManager';
 export default function Dashboard({ logout }) {
   return (
     <div className="flex min-h-screen bg-gray-100">
@@ -34,6 +34,7 @@ export default function Dashboard({ logout }) {
           <Route path="blogs" element={<SectionManager table="blogs" fields={['title', 'content', 'image_url']} />} />
           <Route path="experience" element={<SectionManager table="experience" fields={['company', 'role', 'duration', 'description']} />} />
           <Route path="testimonials" element={<SectionManager table="testimonials" fields={['name', 'position', 'feedback', 'image_url']} />} />
+          <Route path="messages" element={<MessagesManager />} />
         </Routes>
       </main>
     </div>
