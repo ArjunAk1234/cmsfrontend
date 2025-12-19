@@ -12,7 +12,7 @@ export default function MessagesManager() {
     try {
       const res = await axios.get(API_URL, { headers: { Authorization: `Bearer ${token}` } });
       setMessages(res.data);
-      alert(res.data)
+      
     } catch (err) { console.error("Failed to fetch messages"); }
     finally { setLoading(false); }
   };
